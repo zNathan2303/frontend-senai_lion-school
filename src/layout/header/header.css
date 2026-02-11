@@ -1,0 +1,33 @@
+header {
+  padding: 0 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  height: 100px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.header-logo p {
+  max-width: 75px;
+}
+
+.header-voltar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 36px;
+  gap: 12px;
+  cursor: pointer;
+}

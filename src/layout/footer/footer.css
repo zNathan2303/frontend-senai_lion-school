@@ -1,0 +1,56 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 140px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0 96px;
+}
+
+.footer-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-contatos .contato {
+  display: flex;
+  align-items: center;
+  max-height: 30px;
+  gap: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.footer-contatos .contato img {
+  width: 25px;
+}
+
+footer > p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.footer-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-redes .rede {
+  display: grid;
+  place-items: center;
+  border: 1px solid white;
+  height: 48px;
+  width: 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-redes .rede:hover {
+  transform: scale(105%);
+}
