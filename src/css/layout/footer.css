@@ -3,7 +3,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   height: 140px;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-500);
   color: white;
   padding: 0 96px;
 }
