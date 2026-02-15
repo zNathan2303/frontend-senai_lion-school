@@ -1,0 +1,56 @@
+@import '../layout/navigation.css';
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 96px 114px 96px;
+  gap: 48px;
+
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 64px;
+  color: var(--primary-color-500);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 64px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 300px;
+  color: white;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.25);
+  gap: 16px;
+}
+
+.card p {
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card.cursando {
+  background-color: var(--primary-color-500);
+}
+
+.card.finalizado {
+  background-color: var(--secundary-color-500);
+}
+
+.card img {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}

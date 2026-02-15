@@ -1,7 +1,6 @@
 export default function createNavbar() {
   const nav = document.createElement('nav')
 
-  // --- SEÇÃO: STATUS ---
   const statusContainer = document.createElement('div')
   statusContainer.className = 'status-container'
 
@@ -29,13 +28,37 @@ export default function createNavbar() {
     img.src = './src/images/icons/check-icon.svg'
 
     statusDiv.append(p, img)
+
+    statusDiv.addEventListener('click', () => {
+      document.querySelectorAll('.status').forEach(status => {
+        status.classList.remove('selected')
+      })
+
+      statusDiv.classList.add('selected')
+      statusTitle.textContent = item.text
+
+      const cards = document.querySelectorAll('.card')
+
+      if (item.text.toLowerCase() == 'status') {
+        cards.forEach(card => {
+          card.style.display = "block"
+        })
+      } else {
+        cards.forEach(card => {
+          if (card.dataset.status != item.text.toLowerCase())
+            card.style.display = "none"
+          else
+            card.style.display = "block"
+        })
+      }
+    })
+
     statusFilter.append(statusDiv)
   })
 
   statusContainer.append(statusFilter)
   nav.append(statusContainer)
 
-  // --- SEÇÃO: LEGENDA ---
   const captionContainer = document.createElement('div')
   captionContainer.className = 'caption'
 
@@ -45,7 +68,7 @@ export default function createNavbar() {
 
   captionContainer.append(
     createCaptionItem('caption-blue', 'Cursando'),
-    createCaptionItem('caption-yellow', 'Cursando')
+    createCaptionItem('caption-yellow', 'Finalizado')
   )
 
   nav.append(captionContainer)

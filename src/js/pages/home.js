@@ -1,4 +1,8 @@
+import { changePageStyle } from "../utils.js"
+
 export default function createHome() {
+  changePageStyle('home')
+
   // Criação do lado esquerdo da home
   const homeLeft = document.createElement('div')
   homeLeft.className = 'home-left'
