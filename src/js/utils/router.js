@@ -1,5 +1,6 @@
 import createClassPage from '../pages/class.js'
 import createHomePage from '../pages/home.js'
+import createStudentPage from "../pages/student.js";
 
 const app = document.getElementById('app')
 
@@ -26,6 +27,13 @@ async function router() {
   ) {
     app.replaceChildren()
     app.append(... await createClassPage(partsOfTheRoute[2], localStorage.getItem('className')))
+  } else if (
+    partsOfTheRoute.length === 3 &&
+    partsOfTheRoute[1].includes('aluno') &&
+    !isNaN(partsOfTheRoute[2])
+  ) {
+    app.replaceChildren()
+    app.append(... await createStudentPage(partsOfTheRoute[2]))
   }
 }
 

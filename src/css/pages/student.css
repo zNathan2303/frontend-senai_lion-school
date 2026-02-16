@@ -1,0 +1,74 @@
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+main > div {
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color-500);
+  gap: 30px;
+}
+
+.profile img {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+}
+
+.profile p {
+  font-weight: 500;
+  font-size: 18px;
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.performance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.performance > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.score-number {
+  color: var(--primary-color-500);
+  font-weight: 700;
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  font-size: 18px;
+}
+
+.max-score {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 16px;
+  height: 300px;
+  background-color: var(--primary-color-50);
+}
+
+.current-score {
+  width: 100%;
+}
+
+.subject {
+  color: var(--primary-color-500);
+  font-weight: 700;
+  font-size: 18px;
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}

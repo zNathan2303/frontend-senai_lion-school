@@ -21,8 +21,10 @@ export default async function createClassPage(classId, name) {
   students.forEach(student => {
     const status = Math.random() > 0.5 ? 'cursando' : 'finalizado'
 
-    const card = document.createElement('div')
+    const card = document.createElement('a')
     card.className = `card ${status}`
+    card.href = '/aluno/' + student.id
+    card.dataset.route = ''
 
     const img = document.createElement('img')
     img.src = student.foto
