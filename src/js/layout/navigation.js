@@ -25,7 +25,7 @@ export default function createNavbar() {
     p.textContent = item.text
 
     const img = document.createElement('img')
-    img.src = './src/images/icons/check-icon.svg'
+    img.src = '/src/images/icons/check-icon.svg'
 
     statusDiv.append(p, img)
 
@@ -41,14 +41,14 @@ export default function createNavbar() {
 
       if (item.text.toLowerCase() == 'status') {
         cards.forEach(card => {
-          card.style.display = "block"
+          card.style.display = "flex"
         })
       } else {
         cards.forEach(card => {
           if (card.dataset.status != item.text.toLowerCase())
             card.style.display = "none"
           else
-            card.style.display = "block"
+            card.style.display = "flex"
         })
       }
     })

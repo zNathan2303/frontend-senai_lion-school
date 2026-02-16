@@ -18,3 +18,9 @@ main {
 img {
   user-select: none;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

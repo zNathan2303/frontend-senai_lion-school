@@ -1,6 +1,9 @@
-import { changePageStyle } from "../utils.js"
+import { getClasses } from "../services/lion-school-api.js"
+import { changePageStyle } from "../utils/page-style.js"
 
-export default function createHome() {
+export default async function createHomePage() {
+  if (document.querySelector('nav'))
+    document.querySelector('nav').remove()
   changePageStyle('home')
 
   // Criação do lado esquerdo da home
@@ -26,17 +29,30 @@ export default function createHome() {
   const homeRight = document.createElement('div')
   homeRight.className = 'home-right'
 
-  const optionDS = createOption('./src/images/icons/ds-icon.svg', 'DS')
-  const optionRedes = createOption('./src/images/icons/redes-icon.svg', 'REDES')
+  const classes = await getClasses()
 
-  homeRight.append(optionDS, optionRedes)
+  classes.forEach(c => {
+    const props = [
+      c.id,
+      c.nome,
+      c.sigla === 'DS' ? './src/images/icons/ds-icon.svg' : './src/images/icons/redes-icon.svg',
+      c.sigla
+    ]
+    const option = createOption(...props)
+
+    homeRight.append(option)
+  })
 
   return [homeLeft, imgStudent, homeRight]
 }
 
-function createOption(imgSrc, labelText) {
-  const divOption = document.createElement('div')
+function createOption(classId, name, imgSrc, labelText) {
+  const divOption = document.createElement('a')
   divOption.className = 'home-option'
+  divOption.dataset.id = classId
+  divOption.dataset.name = name
+  divOption.dataset.route = ''
+  divOption.href = '/turma/' + classId
 
   const img = document.createElement('img')
   img.src = imgSrc
