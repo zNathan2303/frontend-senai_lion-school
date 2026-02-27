@@ -56,3 +56,5 @@ window.addEventListener('click', async e => {
 window.addEventListener('popstate', router)
 
 document.addEventListener('DOMContentLoaded', router)
+
+window.location.href = "/#/";

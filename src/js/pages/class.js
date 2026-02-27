@@ -1,4 +1,4 @@
-import createNavbar from "../layout/navigation.js"
+import { createNavbar } from "../layout/navigation.js"
 import { getStudentsByClassId } from "../services/lion-school-api.js"
 import { changePageStyle } from "../utils/page-style.js"
 

@@ -1,4 +1,4 @@
-export default function createNavbar() {
+export function createNavbar() {
   const nav = document.createElement('nav')
 
   const statusContainer = document.createElement('div')
@@ -76,7 +76,7 @@ export default function createNavbar() {
   return nav
 }
 
-function createCaptionItem(className, text) {
+export function createCaptionItem(className, text) {
   const div = document.createElement('div')
   div.className = className
 
